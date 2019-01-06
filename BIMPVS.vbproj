@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{808A0951-6870-47F4-B786-93DCB7DF6A8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>BIMPVS</RootNamespace>
+    <AssemblyName>BIMPVS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>發行\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BIMPVS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BIMPVS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Navisworks.Api, Version=11.0.983.73, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64" />
+    <Reference Include="Autodesk.Navisworks.ComApi, Version=11.0.983.73, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64" />
+    <Reference Include="Autodesk.Navisworks.Controls, Version=11.0.983.73, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64" />
+    <Reference Include="Autodesk.Navisworks.Interop.ComApi, Version=11.0.983.73, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BIMPVS.vb" />
+    <Compile Include="BIMPVSform.Designer.vb">
+      <DependentUpon>BIMPVSform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIMPVSform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileUploadForm.designer.vb">
+      <DependentUpon>FileUploadForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileUploadForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NavisworksAutomationAPI11.vb" />
+    <Compile Include="Quaternion.vb" />
+    <Compile Include="Web References\WebReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BIMPVSform.resx">
+      <DependentUpon>BIMPVSform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileUploadForm.resx">
+      <DependentUpon>FileUploadForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Application.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.ApplicationAutomation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.ApplicationDragDrop.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.ApplicationOptions.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.ApplicationPlugins.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.ApplicationResources.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.ApplicationVersion.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ApplicationParts.IApplicationGui.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.AxisAndAngleResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.BoundingBox3D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.CanceledOperationException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Color.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Comment.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.CommentCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Controls.ApplicationControl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Controls.DocumentControl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Controls.RuntimeNames.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Controls.ViewControl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.DatabaseChange.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.DatabaseChangeCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.DatabaseChangedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.DatabaseException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisworksCommand.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisworksConnection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisworksDataAdapter.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisWorksDataReader.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisworksParameter.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisworksParameterCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Data.NavisworksTransaction.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DataProperty.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DataPropertyCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DataPropertyNames.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Document.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentFileException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentInfo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentCurrentComments.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentCurrentMeasurement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentCurrentSearch.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentCurrentSelection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentCurrentViewpoint.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentDatabase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentGrids.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentInfoPart.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentModels.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentSavedViewpoints.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentSelectionSets.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.DocumentTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.IDocumentClash.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.IDocumentTakeoff.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.IDocumentTimeliner.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.DocumentParts.ModelItemPathId.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.EulerAngleResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileInteractiveResolvedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileInteractiveResolvingEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileReferenceResolver.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileReferenceResolveResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileResolutionEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileResolvedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileResolvingEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FileSaveEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.FolderItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Graphics.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridIntersection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridLevel.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridLevelCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridLine.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridLineCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridsData.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridsOptions.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridSystem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GridSystemCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.GroupItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.HelpIdResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.IHasDynamicProperties.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.InfoPropertyCategory.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.InfoPropertyCategoryCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action0.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action1`1.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action2`2.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action3`3.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action4`4.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action5`5.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action6`6.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action7`7.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Action8`8.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func0`1.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func1`2.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func2`3.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func3`4.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func4`5.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func5`6.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func6`7.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func7`8.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException+Func8`9.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.AbortOnException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.ApplicationTrace+TraceHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.ApplicationTrace.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.ICommandHandlerPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.ICommandLayoutPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.IDockToolPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.IEventPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.IGUICommand.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.IMultiCommandHandlerPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.IPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.IPluginFactory.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.ITestPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLAffine3f.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLBox2f.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLFrustum3f.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLMatrix4f.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLPlane3f.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLPos2fList.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLPrimitiveTypes.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcLVec.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcNvCamera.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcNvNavBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcNvNavDriver.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcNvNavigator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcNvTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcNvViewPoint.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaBaseVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaClipPlane.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaClipPlaneSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaData.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaExGroup.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaFragment.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaGroup.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaNode.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaPartition.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaPathLinkGuidIt.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaPathLinkImplicitFragPathIt.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaPathLinkIt.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaPathLinkSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaPathLinkVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaSceneBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaUnit.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaUnitProps.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaUnitState.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaURLDef.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaURLDefVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaURLDefVectorBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaViewer.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOaViewerStereoCameraInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOglProteinAsset.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOglProteinProperty.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOglTextFontInfo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmViewer.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32BuiltinDataObjectFormat.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32DataObjectEnum.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32Kernel.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32KernelEx.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32KernelViewer.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32KernelViewerEx.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOmWin32RedlineTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpActiveSheetEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationController.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationControllerBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationControllerObserver.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationControllerObserverVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationEngine.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationEngineController.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationKeyFrameContext.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationObserver.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationObserverVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationRefPtr.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimationVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimatorInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimSetRefPtr.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAnimSetVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpApplicationCloseEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAppStateMonitor.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAutoLock.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAutosaveControlInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpAxisTranslateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBackground.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBackgroundElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBaseRotateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBaseScaleGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBaseTranslateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBeginEditEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBimViewerApplication.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBimViewerDocument.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBimViewerFileProtocol.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBimViewerGraphics.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBimViewerView.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolASTCondition.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolASTNode.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolASTNodePtr.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolEval.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolEvalContext.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolLineItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolLineItemSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpBoolRefCountedBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCameraAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCameraKeyFrame.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCollisionObserversList.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCommentElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpConfigParser.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCurrentAnimationElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCurrentFilenameChangedEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCurrentSavedView.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpCurrentViewElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDatabaseBeginningTransactionEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDatabaseBeginTransactionEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDatabaseCommitTransactionEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDatabaseRollbackTransactionEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDatabaseTransactionEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDB.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDelta.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDeltaElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiff.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiffDetail.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiffDetailVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiffInfo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiffInfoGeometry.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiffInfoVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDiffResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDummyProgress.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpDynamicSelectEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpElementClass.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpElementItemPathVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpEndEditEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpExportPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFileDatabaseElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFileInfoElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFilePlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFind.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFindConditionFlags.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFindConditionOp.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpFindSpecElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGizmoList.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGizmoTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGraphicsSystemElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGridElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGridRenderHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpGroupItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpHyperlinksOverrideElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpIdleEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpIdleMonitorInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpInputEnum.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpInputHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpInputHandlerNotify.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernel.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelEx.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelFileEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelProgress.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelProgressImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelPublishEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelTimerInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelToolViewer.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelViewer.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKernelViewerEx.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKeyFrame.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpKeyFrameVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLightItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLightItemDistant.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLightItemPoint.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLightItemSpot.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLightItemWeb.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLightsElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpLock.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpMeasureTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpMockRule.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpModelInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpModelUnitsChangedEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpNotify.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpNWCache.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpObjectRotateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpObjectScaleGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpObjectTranslateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpOptionSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpOptionSetRefPtr.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpOptValidFindSelValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpOptValidItemPathValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPathDictElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPerformanceProps.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPreDeleteContentsEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPresenterDropZoneInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPropertyCategoryInfo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPropertyCategoryInfoVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPropertyInfo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpPropertyInfoVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedline.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineCloud.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineEllipse.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineLine.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineList.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineListBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlinePointList.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineText.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRedlineTool.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRegistry.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRenderHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpRenderHandlerNotify.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSaveCommonEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedItemCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedItemGuidSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedItemsDelta.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedItemsElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedItemTypes.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedViewAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedViewAnimationController.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedViewKeyFrame.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSavedViewsElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSceneLoadedEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSectionAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSectionKeyFrame.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSectionPlaneRotateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSectionPlaneScaleGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSectionPlaneTranslateGizmo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSecurity.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectionAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectionElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectionKeyFrame.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectionKeyFrameData.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectionSetsElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectionTreeInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectPathIt.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSelectProps.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpShadFragMaterialElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpShadFragTransformElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpShadFragTransformSnapshot.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpShadNodeAttribsElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSimpleProgress.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSimulationEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSimulationSource.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSimulationSourceGUINotify.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSimulationSourceNotify.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSmartTags.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpState.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpStateEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpStateWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpStdSelectionTreeInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigFileProtocol.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigFileResolveCB.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigKernelProgress.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigProgress.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigSimulationSourceNotify.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigStateWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpSwigTargetHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTargetHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpace.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpaceBox.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpaceCylinder.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpaceElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpaceExplicit.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpacePlane.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTextureSpaceSphere.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpToneMapping.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpToneMappingElement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpTransform3fR.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpUnLoadingFileEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpUpdateFilesEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpUserPropertyEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpViewAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpViewAnimationRefPtr.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpViewerEvent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpViewWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOpWatcherAutoWrite.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwApiCB.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwApplication.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwBitmapRegistry.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwDocument.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwDocumentPtrVec.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwDocumentPtrVecBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwGlobalProps.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwOjectManager.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwRendererManager.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwSelectionTreeControl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwThumbnailGenerator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwViewer.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwViewerPtrVec.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcOwViewerPtrVecBase.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcRmAutoCAM.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcRmFrameworkInterface.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUAutoCIPAction.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUAutoCIPPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUCIP.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUComponent.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUConstWCharPtrVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUCsvReader.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUCsvWriter.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUError.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUExOptionSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUFileProtocol.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUFileProtocolRegistry.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUFPExceptionDisabler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUFPExceptionModifier.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUGuidMarshalTest.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUInt32Vector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUNameRefPtr.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUNameRefPtrVector.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUNWFileVersion.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptCompositeValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptFloatRangeValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptInt32MinValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptInt32RangeValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOption.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptionData.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptionLock.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptionSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptionValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptNonemptyStringValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptSwigValidator.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUOptValueEnabler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUPage.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcURegistryOptionSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUResource.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUResourceSectionHandle.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSchemaUnitGroup.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSession.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSQLite.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSQLiteChangeQuery.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSQLiteConnection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSQLiteStatement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUString.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUStringBufferFormat.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSwigOptionSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSysError+GlobalErrorHandler.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSysError.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.LcUSysRegistry.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.Plugins.LegacyManager.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.Plugins.LegacyPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Interop.RoamerPluginFactory.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Matrix3.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Model.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ModelCreatorNames.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ModelGeometry.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ModelItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ModelItemCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ModelItemEnumerableCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.NamedConstant.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.NativeHandle.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.PickItemResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.AddInPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.AddInPluginAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.AddInPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CommandAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CommandHandlerPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CommandHandlerPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CommandRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CommandState.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CustomPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.CustomPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.DockPanePlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.DockPanePluginAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.DockPanePluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.EventWatcherPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.EventWatcherPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.ExecuteDisabledException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.FileMetadata.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.FileProtocolHandle.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.FileProtocolPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.FileProtocolPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.InputPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.InputPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.InterfaceAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.InterfaceRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.Plugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.PluginAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.PluginLoadException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.PluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.RenderPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.RenderPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.RibbonLayoutAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.RibbonLayoutRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.RibbonTabAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.RibbonTabRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.StringsAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.ToolPlugin.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.ToolPluginRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.ToolTipsAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Plugins.ToolTipsRecord.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Point2D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Point3D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Progress.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressBeginningEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressEndedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressErrorReportingEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressMessageReportingEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressSubOperationBeganEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressSubOperationEndedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProgressUpdatingEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ProjectionResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.PropertyCategory.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.PropertyCategoryCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.PropertyCategoryNames.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.PublishProperties.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Rotation3D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Rule.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.RuleCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.RuntimeLoaderException.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedItem.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedItemChangedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedItemCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedItemReference.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedViewpoint.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedViewpointAnimation.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SavedViewpointAnimationCut.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.BooleanField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.ComplexField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.ConceptCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.DoubleField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.EditAccessor.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.Field.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.FieldCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.GroupField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.GuidField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.Int32Field.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.ReadAccessor.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.SchemaBuilder.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.SchemaData.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.SchemaDefinition.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.SchemaDefinitionCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.SimpleField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.StringField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.StructField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Schema.VectorField.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Search.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SearchCondition.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SearchConditionCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Selection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SelectionSet.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SelectionSource.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SelectionSourceCollection.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.SheetInfo.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.StereoOptions.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.StereoViewpointCalculatedEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.TooltipResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Transaction.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Transform3D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Transform3DComponents.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.UnitConversion.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.UnitVector3D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.VariantData.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Vector3D.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.View.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.ViewEventArgs.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Api.Viewpoint.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.ApplicationAutomationImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.ApplicationConfig.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.ApplicationImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.AssemblySwigAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.AutomationActionResult.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.CollectionIntImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.ComApi.Bridge.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Data.NavisworksConvert.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Data.NavisworksSQLStatement.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Data.SQLiteType.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Data.SQLiteTypeNames.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.DatabaseEventStateWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.EventStateWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.FactoryDict.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.GuiImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.IObjectManager.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.ModelItemCollectionImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.NativeExportPluginAdaptor.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.NativeHandleImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.NativeHandleInit.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.nwiFactoryDelegate.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.PluginExtensions.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.PluginLicenseAttribute.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.ResolveInteractiveImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.SaveCommonEventStateWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.SavedItemEventStateWatcher.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.SavedItemsElementImpl.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Schema.GroupAccess.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Schema.GroupEditor.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Schema.GroupReader.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Schema.IDataEditAccess.datasource" />
+    <None Include="My Project\DataSources\Autodesk.Navisworks.Internal.ApiImplementation.Schema.IDataReadAccess.datasource" />
+    <None Include="My Project\DataSources\BIMPVS.datasource" />
+    <None Include="My Project\DataSources\BIMPVS.My.MySettings.datasource" />
+    <None Include="My Project\DataSources\BIMPVSform.datasource" />
+    <None Include="My Project\DataSources\LcUGuid.datasource" />
+    <None Include="My Project\DataSources\LcUStringBuffer.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Web References\WebReference\BIMPVS_WebServices.wsdl" />
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://140.124.63.3/BIMPVS_Server/BIMPVS_WebServices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://140.124.63.3/BIMPVS_Server/BIMPVS_WebServices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BIMPVS_WebReference_BIMPVS_WebServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebReference\BIMPVS_WebServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bimpvs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="copyright.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://140.124.63.3/BIMPVS_Server/BIMPVS_WebServices.asmx?wsdl" docRef="http://140.124.63.3/BIMPVS_Server/BIMPVS_WebServices.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://140.124.63.3/BIMPVS_Server/BIMPVS_WebServices.asmx" xmlns:q1="http://tempuri.org/" binding="q1:BIMPVS_WebServicesSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://140.124.63.3/BIMPVS_Server/BIMPVS_WebServices.asmx" xmlns:q2="http://tempuri.org/" binding="q2:BIMPVS_WebServicesSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

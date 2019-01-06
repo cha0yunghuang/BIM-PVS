@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BIMPVS
+</name>
+</assembly>
+<members>
+<member name="M:BIMPVS.FileUploadForm.Upload_Request(System.String,System.String,System.String,System.Windows.Forms.ProgressBar)">
+	<summary>
+將本地文件上傳到指定的伺服器(HttpWebRequest方法)
+</summary>
+	<param name="address">文件上傳的伺服器</param>
+	<param name="fileNamePath">要上傳的本地文件(全路徑)</param>
+	<param name="saveName">文件上傳後的名稱</param>
+	<param name="progressBar">上傳進度條</param>
+	<returns>成功回傳1，失敗回傳0</returns>
+</member><member name="M:BIMPVS.WebReference.BIMPVS_WebServices.#ctor">
+	<remarks/>
+</member><member name="E:BIMPVS.WebReference.BIMPVS_WebServices.CreatePanoCompleted">
+	<remarks/>
+</member><member name="M:BIMPVS.WebReference.BIMPVS_WebServices.CreatePano">
+	<remarks/>
+</member><member name="M:BIMPVS.WebReference.BIMPVS_WebServices.CreatePanoAsync">
+	<remarks/>
+</member><member name="M:BIMPVS.WebReference.BIMPVS_WebServices.CreatePanoAsync(System.Object)">
+	<remarks/>
+</member><member name="M:BIMPVS.WebReference.BIMPVS_WebServices.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:BIMPVS.WebReference.BIMPVS_WebServices">
+	<remarks/>
+</member><member name="T:BIMPVS.WebReference.CreatePanoCompletedEventHandler">
+	<remarks/>
+</member><member name="P:BIMPVS.WebReference.CreatePanoCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:BIMPVS.WebReference.CreatePanoCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>
